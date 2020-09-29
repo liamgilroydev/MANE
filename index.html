@@ -1,8 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+
+        function myFunction() {
+        var x = document.getElementById("inc");
+        if (x.style.display === "none") {
+            x.style.display = "inline";
+        } 
+        } 
+
+        var i = 0;
+        function buttonClick() {
+            document.getElementById('inc').value = ++i;
+        }
+    </script>
     <meta charset="UTF-8">
-    <title>Bernelay Gents Co.</title>
+    <title>MANE</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Jura:wght@400;700&display=swap" rel="stylesheet">    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -13,7 +27,7 @@
 
 <header>
 <div class="container" style="background-color:#1a1a1a;">
-    <img id="logob" src="/Users/liamgilroy/Desktop/Desktop/Web/Mane/images/MANE_logo_2.png">
+    <img id="logob" src="/Users/liamgilroy/Desktop/Desktop/Web/Mane/images/MANE_logo_2.png">    
 </div>
 
 <!-- MENU -->
@@ -28,15 +42,22 @@
                 <a class="nav-link" href="about.html">About</a>
             </li>
             <li class="nav-item btn-dark">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="products.html">Products</a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Shampoo</a>
-                    <a class="dropdown-item" href="#">Brushes</a>
-                    <a class="dropdown-item" href="#">Clippers</a>
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="products.html">Shop</a>
+                <div class="dropdown-menu" style="background-color: black; left: 50%;
+                right: auto;">
+                    <a class="dropdown-item" href="beard.html" style="color:white;">Beard Trimmers</a>
+                    <a class="dropdown-item" href="clippers.html" style="color:white;">Clippers</a>
+                    <a class="dropdown-item" href="scissors.html" style="color:white;">Scissors</a>
                 </div>
             </li>
             <li class="nav-item btn-dark">
                 <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <br><br>
+            <li class="nav-item btn-dark">
+                <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-cart" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="margin-left:10px;">
+                    <path fill-rule="evenodd" d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                  </svg>
             </li>
         </ul>
 
@@ -48,10 +69,10 @@
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="https://image.freepik.com/free-photo/client-doing-hair-cut-barber-shop-salon_1303-20710.jpg" class="d-block w-100" alt="BGC Beard Oil">
+        <img src="https://image.freepik.com/free-photo/client-doing-hair-cut-barber-shop-salon_1303-20710.jpg" class="d-block w-100" alt="Beard Trimmer">
       </div>
       <div class="carousel-item">
-        <img src="https://image.freepik.com/free-photo/handsome-man-barber-shop-styling-hair_1303-20978.jpg" class="d-block w-100" alt="Horse Care">
+        <img src="https://image.freepik.com/free-photo/handsome-man-barber-shop-styling-hair_1303-20978.jpg" class="d-block w-100" alt="Mens Grooming">
       </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -82,7 +103,7 @@
                 <div class="card-body">
                   <h5 class="card-title">BEARD TRIMMERS</h5>
                   <p class="card-text">Tackle the wildest manes.</p>
-                  <a href="#" class="btn btn-secondary">View</a>
+                  <a href="beard.html" class="btn btn-secondary">View</a>
                 </div>
             </div>
             <div class="col-sm-4">
@@ -90,7 +111,7 @@
                 <div class="card-body">
                   <h5 class="card-title">PRO CLIPPERS</h5>
                   <p class="card-text">Jump in the fade.</p>
-                  <a href="#" class="btn btn-secondary">View</a>
+                  <a href="clippers.html" class="btn btn-secondary">View</a>
                 </div>
             </div>
             <ddiv class="col-sm-4">
@@ -98,30 +119,29 @@
                 <div class="card-body">
                   <h5 class="card-title">SCISSORS</h5>
                   <p class="card-text">A cut above the rest. </p>
-                  <a href="#" class="btn btn-secondary">View</a>
+                  <a href="scissors.html" class="btn btn-secondary">View</a>
                 </div>
             </div>
     </div>
+    <br>
 
     <!--Section One-->
-    <br>
-    
-    <div>
-        <iframe style="float:left; margin:40px; width:50%; height: 400px;" src="https://www.youtube.com/embed/Y3LwPwutiAk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-
-        <div style="margin:40px;">
+        <div class="row" style="margin:40px;">
+            <div class="col-md-6">
+                <img src="https://image.freepik.com/free-photo/professional-barber-shop-essentials_23-2148353430.jpg" style="width:100%; margin: auto;">
+            </div>
+            <div class="col-md-6">
             <h2>110% AUTHENTIC</h2>
             <br>
-            <p>With Mane, you get no compromise. All of our products are made to the highest quality and produced with love and care. When you're this good at what you do, it shows. We are proud to be used across the globe. Why not join the Man family?</p>
-            <br>
-            <p>Are you looking to become an official partner? We're on the look out for fresh new talent to represent our products. If you think you have what it takes, we would love to hear from you. Post clips of your Mane products tagging #ManeFamily to show us what you' got!</p>
+            <p>Are you looking to become an official partner? We're on the look out for fresh new talent to represent our products. If you think you have what it takes, we would love to hear from you. Post clips of your Mane products tagging #ManeFamily to show us what you' got</p>
+            <p>We're looking for the slickest talent to represent the brand, so be sure you grab your Mane products and get posting!</p>
+            </div>
         </div>
     
 
 
     <!--Testimonials-->
-    <br><br><br><br>
+    <br><br>
     <div id="test">
         <br><br>
         <h2>Take Their Word For It</h2>
@@ -132,7 +152,7 @@
 <br><br>
     <!--CTA Button-->
     <div class="row" style="margin:40px;"> 
-    <button type="button" class="btn btn-outline-secondary btn-lg" style="margin:auto;">Shop Now</button>
+    <button type="button" class="btn btn-outline-secondary btn-lg" style="margin:auto;" onclick="location.href='about.html';">About Us</button>
     </div>
     <br><br><br>
 </body>

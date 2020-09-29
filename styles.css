@@ -93,3 +93,15 @@ a:hover
 {
   color: #4b4b4b !important;
 }
+
+#inc
+{
+  background-color: red;
+  color: white;
+  border-radius: 22px;
+  border: none;
+  width: 20px;
+  height: 20px; 
+  text-align: center;
+  font-size: 10px;
+}
